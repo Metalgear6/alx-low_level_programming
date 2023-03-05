@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
    *main - Entry point
    *Discription: nombers from 01 to 89
@@ -8,21 +6,19 @@
    */
 int main(void)
 {
-	int d, p;
+	int d;
+	int p;
 
-	for (d = '0'; d < '9'; d++)
+	for (d = '0'; d <= '9'; d++)
 	{
 	for (p = d + 1 ; p <= '9'; p++)
 	{
-	if (p != d)
-	{
-		putchar(d);
-		putchar(p);
-	if (d == '8' && p == '9')
-		continue;
+		putchar(d + 0);
+		putchar(p + 0);
 		putchar(',');
 		putchar(' ');
-	}
+	if (d < 8)
+		continue;
 	}
 	}
 	putchar('\n');
